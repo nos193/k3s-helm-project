@@ -1,6 +1,8 @@
 # k3s-helm-project
 
-Bienvenue sur le répertoire du projet k3s-helm-project. Ce projet vise à déployer une stack LAMP et une application web Node.js en utilisant Helm sur k3s.
+Bienvenue sur le repo du projet k3s-helm-project. Ce projet vise à déployer une stack LAMP et une application web Node.js en utilisant Helm sur k3s.
+
+Ce projet est réalisé par Kilian ROSAK et MENOU Lucas
 
 ## Démo du Projet
 
