@@ -1,0 +1,4 @@
+apiVersion: v2
+name: lamp-chart
+description: A Helm chart for Kubernetes to deploy a LAMP stack
+version: 0.1.0

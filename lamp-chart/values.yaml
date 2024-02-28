@@ -1,0 +1,8 @@
+apachePhp:
+  image: "php:7.4-apache"
+  port: 80
+
+mysql:
+  image: "mysql:5.7"
+  port: 3306
+  rootPassword: root

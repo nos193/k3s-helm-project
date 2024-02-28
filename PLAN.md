@@ -31,4 +31,3 @@ Le travail sera réparti en grandes lignes comme suit:
 - **Tests et Validation:** MENOU Lucas
 - **Documentation et Rédaction:** MENOU Lucas
 - **Déploiement et Monitoring:** ROSAK Kilian
-
