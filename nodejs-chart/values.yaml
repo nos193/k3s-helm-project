@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: kasoro/devops
+  pullPolicy: IfNotPresent
+  tag: "62f2e16ac5f64422b63cfcaf383c9c49b8591678"
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000

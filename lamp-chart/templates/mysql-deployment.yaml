@@ -13,10 +13,10 @@ spec:
         app: mysql
     spec:
       containers:
-      - name: mysql
-        image: "{{ .Values.mysql.image }}"
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: "{{ .Values.mysql.rootPassword }}"
-        ports:
-        - containerPort: {{ .Values.mysql.port }}
+        - name: mysql
+          image: {{ .Values.mysql.image }}
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: {{ .Values.mysql.rootPassword }}
+          ports:
+            - containerPort: {{ .Values.mysql.port }}

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-nodejs
+  template:
+    metadata:
+      labels:
+        app: my-nodejs
+    spec:
+      containers:
+      - name: my-nodejs
+        image: kasoro/devops:latest
+        env:
+        - name: DB_HOST
+          value: "mysql"
+        - name: DB_USER
+          value: "user"
+        - name: DB_PASSWORD
+          value: "root"
+        - name: DB_NAME
+          value: "mysql-db"
+        - name: DB_PORT
+          value: "3306" 
+        - name: DB_DIALECT
+          value: "mysql"
