@@ -23,7 +23,9 @@ spec:
             - name: DB_USER
               value: {{ .Values.mysql.user }}
             - name: DB_PASSWORD
-              value: {{ .Values.mysql.password }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.mysql.passwordSecretName }}
+                  key: {{ .Values.mysql.passwordSecretKey }}
             - name: DB_NAME
               value: {{ .Values.mysql.database }}
-
