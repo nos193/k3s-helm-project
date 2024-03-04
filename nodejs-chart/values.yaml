@@ -3,9 +3,14 @@ replicaCount: 1
 image:
   repository: kasoro/devops
   pullPolicy: IfNotPresent
-  tag: "62f2e16ac5f64422b63cfcaf383c9c49b8591678"
+  tag: latest
 
 service:
   type: NodePort
-  port: 80
-  targetPort: 3000
+  port: 8080
+
+mysql:
+  host: "mysql"
+  database: "mysql"
+  user: "user"
+  password: "root"
