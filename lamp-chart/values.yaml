@@ -1,12 +1,21 @@
 apachePhp:
+  name: "apache-php"
   image: php:7.4-apache
   port: 80
+  targetPort: 80
+  type: LoadBalancer
 
 mysql:
+  name: "mysql"
   image: mysql:5.7
-  rootPassword: root
   port: 3306
+  passwordSecretName: "mysql-pass"
+  passwordSecretKey: "password"
+  type: ClusterIP
 
 phpmyadmin:
+  name: "phpmyadmin"
   image: phpmyadmin/phpmyadmin
   port: 80
+  nodePort: 30080
+  type: NodePort

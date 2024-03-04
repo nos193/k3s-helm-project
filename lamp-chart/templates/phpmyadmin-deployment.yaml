@@ -10,13 +10,13 @@ spec:
   template:
     metadata:
       labels:
-        app: phpmyadmin
+        app: {{ .Values.phpmyadmin.name }}
     spec:
       containers:
-        - name: phpmyadmin
+        - name: {{ .Values.phpmyadmin.name }}
           image: {{ .Values.phpmyadmin.image }}
           env:
             - name: PMA_HOST
-              value: "mysql"
+              value: {{ .Values.mysql.name }}
           ports:
             - containerPort: {{ .Values.phpmyadmin.port }}

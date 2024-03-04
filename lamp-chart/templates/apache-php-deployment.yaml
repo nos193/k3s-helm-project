@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apache-php
+  name: {{ .Values.apachePhp.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: apache-php
+      app: {{ .Values.apachePhp.name }}
   template:
     metadata:
       labels:
-        app: apache-php
+        app: {{ .Values.apachePhp.name }}
     spec:
       containers:
-        - name: apache-php
+        - name: {{ .Values.apachePhp.name }}
           image: {{ .Values.apachePhp.image }}
           ports:
             - containerPort: {{ .Values.apachePhp.port }}

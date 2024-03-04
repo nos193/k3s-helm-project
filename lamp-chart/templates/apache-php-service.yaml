@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: apache-php
+  name: {{ .Values.apachePhp.name }}-service
 spec:
-  type: LoadBalancer
+  type: {{ .Values.apachePhp.type }}
   selector:
-    app: apache-php
+    app: {{ .Values.apachePhp.name }}
   ports:
-    - port: 80
-      targetPort: {{ .Values.apachePhp.port }}
+    - port: {{ .Values.apachePhp.port }}
+      targetPort: {{ .Values.apachePhp.targetPort }}
